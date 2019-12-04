@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css3</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <style>
+        @font-face {
+          font-family: font1;
+          src: .url(/iconfont/iconfont.ttf)
+        }
+        @font-face {
+            font-family: 'Merriweather';
+            src: url(./iconfont/Merriweather.ttf);
+        }
+        body {
+            width: 100%;
+            height: 1100px;
+            background-image: linear-gradient(to top left,  #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-repeat: no-repeat;
+            border-radius: 10px 10px;
+        }
+        h4 {
+            color: rgb(51,51,52);
+        }
+        .first-section {
+            text-align: center;
+        }
+        .first-section > p {
+            font-family: MS PGothic;
+            color: white;
+            font-size: 92px;
+            font-weight: bold;
+            letter-spacing: 2.4px;
+            margin: -5px 0 0 0;
+            text-shadow: black 0 10px 0;
+        }
+        .second-section {
+            text-align: center;
+        }
+        .second-section > div {
+            margin: 0 auto;
+            width: 450px;
+            height: 150px;
+            background-color: white;
+            padding: 5px 15px;
+        }
+        .second-section > div > p {
+            font-size: 20px;
+            font-family: "iconfont";
+            text-align: justify;
+            color: rgb(0,128,1);
+        }
+        .third-section {
+            text-align: center;
+            width: 100%;
+            height: 250px;
+        }
+        .third-section :not(h4) {
+            display:inline;
+        }
+        .icon-img {
+            width: 250px;
+            height: 160px;
+            border-color: white;
+            border-style: solid;
+            border-width: 10px;
+            margin: 0 5px;
+        }
+        .take1 {
+            width: 260px;
+            height: 180px;
+        }
+        .take2 {
+            width: 260px;
+            height: 180px;
+        }
+        .take3 {
+            width: 260px;
+            height: 180px;
+        }
+        .empire-state {
+            width: 250px;
+            height: 160px;
+            position: absolute;
+            background-color: rgba(58,1,132,0.44);
+            text-align: center;
+            visibility: hidden;
+            margin: 10px 15px;
+            margin-left: -270px;
+            display: block;
+        }
+        .back-head, .back-content, .back-readmore{
+            color: white;
+            font-family: 'Merriweather';
+        }
+        .back-head {
+            font-size: 13px;
+        }
+        .back-content {
+            font-size: 5px;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        .back-readmore {
+            font-size: 15px;
+            background-color: black;
+            margin-bottom: -10px;
+            padding: 5px 10px;
+        }
+        .liberty-content {
+            color: white;
+            font-family: 'Merriweather';
+            font-size: 5px;
+            font-style: italic;
+            margin: 5px 0;
+        }
+        .liberty-content::before{
+            content: "";
+            width: 220px;
+            display: block;
+            border-top: 1.5px solid gray;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        .midtown {
+            width: 250px;
+            height: 160px;
+            position: absolute;
+            text-align: center;
+            visibility: hidden;
+            margin: 10px 15px;
+            margin-left: -270px;
+            overflow: hidden;
+        }
+        .midtown:before
+        {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: -60%;
+            left: -40%;
+            z-index: 1;
+            overflow: hidden;
+            background-color: rgba(7, 7, 7, 0.44);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .liberty {
+            width: 250px;
+            height: 160px;
+            position: absolute;
+            background-color: rgba(255,231,179,0.3);
+            text-align: center;
+            visibility: hidden;
+            margin: 10px 15px;
+            margin-left: -265px;
+        }
+        .take1:hover .empire-state {
+            visibility: visible;
+        }
+        .take2:hover .midtown {
+            visibility: visible;
+        }
+        .take3:hover .liberty{
+            visibility: visible;
+        }
+        .forth-section {
+            text-align: center;
+        }
+        .tri-white { 
+            width: 0; 
+            height: 0; 
+            border: 20px solid; 
+            border-color: transparent transparent white transparent; 
+            float: right;
+            margin-top: -30px;
+            margin-right: 300px;
+        }
+        .multi-columns {
+            margin: 0 auto;
+            width: 600px;
+            height: 130px;
+            border-radius: 6px 6px;
+            background-color: white;
+            column-count: 3;
+            column-width: 150px;
+            -webkit-column-gap: 25px;
+            text-align: justify;
+            font-size: 14px;
+            font-family: serif;
+            padding: 10px 10px;
+        }
+        .multi-columns > p {
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="first-section">
+      <h4>第一部分：text-shadow的使用</h4>
+      <p>CSS3 实战练习</p>
+    </div>
+
+    <div class="second-section">
+      <h4>第二部分：@font-face和渐变的应用</h4>
+      <div>
+          <p class="icon-yinhao icon-quotation">Dream what you want to dream; go where you want to go; be what you want to be, because you have only one life and one chance to do all the things you want to do.</p>
+      </div>
+    </div>
+
+    <div class="third-section">
+      <h4>第三部分：弹性布局，伪类选择器，变形的使用</h4>
+      <div class="take1">
+        <div><img src="image/empire-state.png" class="icon-img" alt="empire" title="empire"></div>
+        <div class="empire-state">
+          <p class="back-head">EMPIRE STATE</p><br>
+          <p class="back-content">A cool description of some sort between these tags. I am so cool and awesomely awesome.</p><br>
+          <div class="back-readmore"><p>READ MORE</p></div>
+        </div>
+      </div>
+      <div class="take2">
+        <div><img src="image/midtown.png" class="icon-img" alt="midtown" title="midtown"></div>
+        <div class="midtown">
+            <p class="back-head">MIDTOWN</p><br>
+            <p class="back-content">A cool description of some sort between these tags. I am so cool and awesomely awesome.</p><br>
+            <div class="back-readmore"><p>READ MORE</p></div>
+        </div>
+      </div>
+      <div class="take3">
+        <div><img src="image/liberty.png" class="icon-img" alt="liberty" title="liberty"></div>
+        <div class="liberty">
+            <p class="back-head">THE ONLY LIVING BOY</p><br>
+            <p class="back-head">IN NEW YORK</p><br>
+            <p class="liberty-content">Words and such, a whole lot more of much flippin's work</p><br>
+            <div class="back-readmore"><p>READ MORE</p></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="forth-section">
+        <h4>第四部分：Multi-column Layout Module的应用</h4>
+        <div class="tri-white"></div>
+        <div class="multi-columns">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </div>
+</body>
+</html>
